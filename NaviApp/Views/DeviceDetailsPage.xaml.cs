@@ -1,20 +1,22 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using CommunityToolkit.Mvvm.Messaging;
+using NaviApp.Enums;
 using NaviApp.Models;
-using NaviApp.Utils;
+using NaviApp.ViewModels;
 
 namespace NaviApp.Views;
 
 public partial class DeviceDetailsPage : Page
 {
-    public DeviceDetailsPage(Device device)
+    public DeviceDetailsPage()
     {
         InitializeComponent();
-        DataContext = device; // 设置DataContext为当前设备
     }
 
     private void Room_Click(object sender, RoutedEventArgs e)
     {
-        Dialog.Show("RootDialog", "Room Clicked");
+        if (((FrameworkElement)sender).DataContext is not DeviceDetailViewModel vm) return;
+        WeakReferenceMessenger.Default.Send(new Message { Id = MessageId.Jump2R, Extra = vm.Owner.Id });
     }
 }

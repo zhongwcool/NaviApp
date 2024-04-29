@@ -7,9 +7,10 @@ namespace NaviApp.Views;
 
 public partial class DevicesPage : Page
 {
-    public DevicesPage()
+    public DevicesPage(Guid key)
     {
         InitializeComponent();
         DataContext = (Application.Current as App)?.ServiceProvider?.GetRequiredService<DevicesViewModel>();
+        if (DataContext is DevicesViewModel vm) vm.SetSelectedItem(key);
     }
 }

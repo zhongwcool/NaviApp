@@ -7,9 +7,10 @@ namespace NaviApp.Views;
 
 public partial class RoomsPage : Page
 {
-    public RoomsPage()
+    public RoomsPage(Guid roomId)
     {
         InitializeComponent();
         DataContext = (Application.Current as App)?.ServiceProvider?.GetRequiredService<RoomsViewModel>();
+        if (DataContext is RoomsViewModel vm) vm.SetSelectedItem(roomId);
     }
 }

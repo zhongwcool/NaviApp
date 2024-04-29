@@ -16,6 +16,11 @@ public class RoomsViewModel : ObservableObject
         SelectedItem = Rooms[0];
     }
 
+    public void SetSelectedItem(Guid roomId)
+    {
+        SelectedItem = Rooms.FirstOrDefault(r => r.Id == roomId);
+    }
+
     // 当前选中页内容
     private object _selectedPageContent;
 

@@ -6,5 +6,5 @@ public class Room
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Name { get; set; }
-    public ObservableCollection<string> Devices { get; set; }
+    public ObservableCollection<Guid> Devices { get; set; }
 }

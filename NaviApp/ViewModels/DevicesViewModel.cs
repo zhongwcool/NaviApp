@@ -14,6 +14,11 @@ public class DevicesViewModel : ObservableObject
         SelectedItem = Devices[0];
     }
 
+    public void SetSelectedItem(Guid deviceId)
+    {
+        SelectedItem = Devices.FirstOrDefault(r => r.Id == deviceId);
+    }
+
     public ObservableCollection<Device> Devices { get; set; }
 
     // 当前选中页内容
@@ -40,6 +45,10 @@ public class DevicesViewModel : ObservableObject
 
     private void NavigateToPage(Device device)
     {
-        SelectedPageContent = new DeviceDetailsPage(device);
+        if (null == device) return;
+        SelectedPageContent = new DeviceDetailsPage
+        {
+            DataContext = new DeviceDetailViewModel(device.Id)
+        };
     }
 }

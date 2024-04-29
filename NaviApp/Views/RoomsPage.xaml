@@ -9,20 +9,20 @@
       Title="RoomPage" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <!-- Navigation Bar -->
         <ListBox DockPanel.Dock="Left" Width="100"
-                 ItemsSource="{Binding Rooms}" 
-                 DisplayMemberPath="Name" 
+                 ItemsSource="{Binding Rooms}"
+                 DisplayMemberPath="Name"
                  SelectedItem="{Binding SelectedItem}"
-                 Grid.Column="0"/>
-        
+                 Grid.Column="0" />
+
         <!-- Content Area -->
         <Frame Content="{Binding SelectedPageContent}"
-                NavigationUIVisibility="Hidden"
-               Grid.Column="1"/>
+               NavigationUIVisibility="Hidden"
+               Grid.Column="1" />
     </Grid>
 </Page>

@@ -35,16 +35,12 @@ public class NavigationViewModel : ObservableObject
     private void NavigateToPage(MessageId pageKey, Guid key = default)
     {
         // 根据pageKey来获取对应的Page对象
-        // 举例
-        switch (pageKey)
+        SelectedPageContent = pageKey switch
         {
-            case MessageId.Jump2R:
-                SelectedPageContent = new RoomsPage(key);
-                break;
-            case MessageId.Jump2D:
-                SelectedPageContent = new DevicesPage(key);
-                break;
-        }
+            MessageId.Jump2R => new RoomsPage(key),
+            MessageId.Jump2D => new DevicesPage(key),
+            _ => SelectedPageContent
+        };
     }
 
     public NavigationViewModel()

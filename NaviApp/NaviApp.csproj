@@ -31,9 +31,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AdditionalFiles Include="Assets\0_dummy.json">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </AdditionalFiles>
+        <None Include="Assets\0_dummy.json"/>
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">

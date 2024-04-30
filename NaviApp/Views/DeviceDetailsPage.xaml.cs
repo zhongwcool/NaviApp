@@ -17,6 +17,7 @@ public partial class DeviceDetailsPage : Page
     private void Room_Click(object sender, RoutedEventArgs e)
     {
         if (((FrameworkElement)sender).DataContext is not DeviceDetailViewModel vm) return;
+        if (null == vm.Owner) return;
         WeakReferenceMessenger.Default.Send(new Message { Id = MessageId.Jump2R, Extra = vm.Owner.Id });
     }
 }

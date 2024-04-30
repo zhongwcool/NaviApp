@@ -19,16 +19,16 @@ public class NavigationViewModel : ObservableObject
         set => SetProperty(ref _selectedPageContent, value);
     }
 
-    private Navigation _selected;
+    private Navigation _selectedItem;
 
-    public Navigation Selected
+    public Navigation SelectedItem
     {
-        get => _selected;
+        get => _selectedItem;
         set
         {
-            SetProperty(ref _selected, value);
+            SetProperty(ref _selectedItem, value);
             // 根据导航项标识符导航到对应的Page
-            NavigateToPage(_selected.PageKey, _childKey);
+            NavigateToPage(_selectedItem.PageKey, _childKey);
         }
     }
 
@@ -50,7 +50,7 @@ public class NavigationViewModel : ObservableObject
             new Navigation { NaviName = "房间", PageKey = MessageId.Jump2R },
             new Navigation { NaviName = "设备", PageKey = MessageId.Jump2D },
         ];
-        Selected = NavigationItems[0];
+        SelectedItem = NavigationItems[0];
 
         WeakReferenceMessenger.Default.Register<Message>(this, OnReceive);
     }
@@ -60,6 +60,6 @@ public class NavigationViewModel : ObservableObject
     private void OnReceive(object recipient, Message message)
     {
         _childKey = (Guid)message.Extra;
-        Selected = NavigationItems.FirstOrDefault(n => n.PageKey == message.Id);
+        SelectedItem = NavigationItems.FirstOrDefault(n => n.PageKey == message.Id);
     }
 }

@@ -21,7 +21,7 @@
                 <ListBox Width="100"
                          ItemsSource="{Binding NavigationItems}"
                          DisplayMemberPath="NaviName"
-                         SelectedItem="{Binding Selected, UpdateSourceTrigger=PropertyChanged}"
+                         SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"
                          Grid.Column="0" />
 
                 <!-- Content Area -->

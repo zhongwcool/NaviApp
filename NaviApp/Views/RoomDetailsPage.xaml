@@ -9,8 +9,6 @@
       d:DataContext="{d:DesignInstance d:Type=vm:RoomDetailViewModel, IsDesignTimeCreatable=True}"
       Title="RoomDetailsPage" Height="450" Width="800">
     <StackPanel>
-
-
         <Grid Margin="0,10,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />

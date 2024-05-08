@@ -9,10 +9,11 @@
                 <md3:BundledTheme BaseTheme="Inherit" PrimaryColor="Orange" SecondaryColor="Lime" />
                 <ResourceDictionary
                     Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
-                
+
                 <!-- Other merged dictionaries here -->
+                <ResourceDictionary Source="Themes/Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            
+
             <Thickness x:Key="ControlPageContentMargin">24,20,24,20</Thickness>
         </ResourceDictionary>
     </Application.Resources>

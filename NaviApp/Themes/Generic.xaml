@@ -1,0 +1,30 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ct="clr-namespace:NaviApp.Controls"
+                    xmlns:cv="clr-namespace:NaviApp.Converters">
+
+    <cv:BrushOpacityConverter x:Key="BrushOpacityConverter" />
+
+    <Style TargetType="{x:Type ct:ClickableTextBlock}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ct:ClickableTextBlock}">
+                    <TextBlock Text="{TemplateBinding Text}" Padding="8"
+                               Cursor="Hand"
+                               Foreground="{DynamicResource MaterialDesign.Brush.Primary.Light}">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background"
+                                                Value="{Binding Foreground, RelativeSource={RelativeSource Self}, Converter={StaticResource BrushOpacityConverter}, ConverterParameter=0.16}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

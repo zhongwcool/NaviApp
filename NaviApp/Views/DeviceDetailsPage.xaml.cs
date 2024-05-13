@@ -24,8 +24,6 @@ public partial class DeviceDetailsPage : Page
 
     private void ViewLoaded(object sender, RoutedEventArgs e)
     {
-        //获得viewModel
-        var vm = DataContext as DeviceDetailViewModel;
-        vm?.LoadDataAsync();
+        if (DataContext is DeviceDetailViewModel vm) _ = vm.LoadDataAsync();
     }
 }

@@ -24,8 +24,6 @@ public partial class RoomDetailsPage : Page
 
     private void ViewLoaded(object sender, RoutedEventArgs e)
     {
-        //获得viewModel
-        var vm = DataContext as RoomDetailViewModel;
-        vm?.LoadDataAsync();
+        if (DataContext is RoomDetailViewModel vm) _ = vm.LoadDataAsync();
     }
 }

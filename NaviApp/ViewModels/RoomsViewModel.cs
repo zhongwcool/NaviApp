@@ -18,6 +18,12 @@ public class RoomsViewModel : ObservableObject
 
     public void SetSelectedItem(Guid roomId)
     {
+        if (roomId == Guid.Empty)
+        {
+            SelectedItem = Rooms.FirstOrDefault();
+            return;
+        }
+
         SelectedItem = Rooms.FirstOrDefault(r => r.Id == roomId);
     }
 

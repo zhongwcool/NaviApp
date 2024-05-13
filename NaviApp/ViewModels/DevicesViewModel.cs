@@ -16,6 +16,12 @@ public class DevicesViewModel : ObservableObject
 
     public void SetSelectedItem(Guid deviceId)
     {
+        if (deviceId == Guid.Empty)
+        {
+            SelectedItem = Devices.FirstOrDefault();
+            return;
+        }
+
         SelectedItem = Devices.FirstOrDefault(r => r.Id == deviceId);
     }
 

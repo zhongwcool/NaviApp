@@ -6,7 +6,7 @@
       xmlns:vm="clr-namespace:NaviApp.ViewModels"
       mc:Ignorable="d"
       d:DataContext="{d:DesignInstance d:Type=vm:RoomsViewModel, IsDesignTimeCreatable=True}"
-      Title="RoomPage" Height="450" Width="800">
+      Title="RoomPage" d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />

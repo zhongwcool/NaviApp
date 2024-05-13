@@ -6,22 +6,22 @@
       xmlns:vm="clr-namespace:NaviApp.ViewModels"
       mc:Ignorable="d"
       d:DataContext="{d:DesignInstance d:Type=vm:DevicesViewModel, IsDesignTimeCreatable=True}"
-      Title="DevicesPage" Height="450" Width="800">
+      Title="DevicesPage" d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <!-- Navigation Bar -->
         <ListBox DockPanel.Dock="Left" Width="100"
-                 ItemsSource="{Binding Devices}" 
-                 DisplayMemberPath="Name" 
+                 ItemsSource="{Binding Devices}"
+                 DisplayMemberPath="Name"
                  SelectedItem="{Binding SelectedItem}"
-                 Grid.Column="0"/>
-        
+                 Grid.Column="0" />
+
         <!-- Content Area -->
         <Frame Content="{Binding SelectedPageContent}"
                NavigationUIVisibility="Hidden"
-               Grid.Column="1"/>
+               Grid.Column="1" />
     </Grid>
 </Page>

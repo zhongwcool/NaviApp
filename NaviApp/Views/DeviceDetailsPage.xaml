@@ -26,5 +26,10 @@
                 </WrapPanel>
             </Grid>
         </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150">
+            <TextBlock Text="{Binding TxtStatus}" />
+            <ProgressBar Maximum="100" Value="{Binding ProgressValue}" />
+        </StackPanel>
     </Grid>
 </Page>

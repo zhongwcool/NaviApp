@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 using CommunityToolkit.Mvvm.Messaging;
 using NaviApp.Enums;
 using NaviApp.Models;
@@ -7,7 +6,7 @@ using NaviApp.ViewModels;
 
 namespace NaviApp.Views;
 
-public partial class RoomDetailsPage : Page
+public partial class RoomDetailsPage
 {
     public RoomDetailsPage()
     {

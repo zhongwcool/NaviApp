@@ -1,9 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace NaviApp.Controls;
 
-public class ClickableTextBlock : Control
+public sealed class ClickableTextBlock : Control
 {
     public static readonly DependencyProperty TextProperty =
         DependencyProperty.Register(nameof(Text), typeof(string), typeof(ClickableTextBlock),
@@ -28,10 +29,34 @@ public class ClickableTextBlock : Control
     }
 
     // 增加事件触发
-    protected virtual void OnClick()
+    private void OnClick()
     {
         var newEventArgs = new RoutedEventArgs(ClickEvent);
         RaiseEvent(newEventArgs);
+    }
+
+    public static readonly DependencyProperty CommandProperty =
+        DependencyProperty.Register(nameof(Command), typeof(ICommand), typeof(ClickableTextBlock),
+            new PropertyMetadata(null)
+        );
+
+    public ICommand Command
+    {
+        get => (ICommand)GetValue(CommandProperty);
+        set => SetValue(CommandProperty, value);
+    }
+
+    public static readonly DependencyProperty CommandParameterProperty =
+        DependencyProperty.Register(
+            nameof(CommandParameter),
+            typeof(object),
+            typeof(ClickableTextBlock),
+            new PropertyMetadata(null));
+
+    public object CommandParameter
+    {
+        get => GetValue(CommandParameterProperty);
+        set => SetValue(CommandParameterProperty, value);
     }
 
     // 构造函数
@@ -50,6 +75,11 @@ public class ClickableTextBlock : Control
         MouseLeftButtonDown += (s, e) =>
         {
             OnClick(); // 触发点击事件
+
+            if (Command != null && Command.CanExecute(CommandParameter))
+            {
+                Command.Execute(CommandParameter);
+            }
         };
     }
 }

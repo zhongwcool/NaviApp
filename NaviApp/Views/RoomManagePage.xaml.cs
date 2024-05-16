@@ -5,9 +5,9 @@ using NaviApp.ViewModels;
 
 namespace NaviApp.Views;
 
-public partial class RoomsPage : Page
+public partial class RoomManagePage : Page
 {
-    public RoomsPage(Guid roomId)
+    public RoomManagePage(Guid roomId)
     {
         InitializeComponent();
         DataContext = (Application.Current as App)?.ServiceProvider?.GetRequiredService<RoomsViewModel>();

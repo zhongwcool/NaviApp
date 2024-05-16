@@ -37,8 +37,8 @@ public class NavigationViewModel : ObservableObject
         // 根据pageKey来获取对应的Page对象
         SelectedPageContent = pageKey switch
         {
-            MessageId.Jump2R => new RoomsPage(key),
-            MessageId.Jump2D => new DevicesPage(key),
+            MessageId.Jump2R => new RoomManagePage(key),
+            MessageId.Jump2D => new DeviceManagePage(key),
             _ => SelectedPageContent
         };
     }

@@ -9,15 +9,17 @@
       d:DataContext="{d:DesignInstance d:Type=vm:RoomDetailViewModel, IsDesignTimeCreatable=True}"
       Title="RoomDetailsPage" d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel>
-            <Grid Margin="0,10,0,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label FontWeight="Bold" Grid.Column="0">设备*:</Label>
-                <!-- 显示一个房间里的所有设备 -->
-                <ItemsControl ItemsSource="{Binding Devices}" Grid.Column="1">
+        <Grid Margin="0,10,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label FontWeight="Bold" Grid.Column="0">设备*:</Label>
+
+            <!-- 显示一个房间里的所有设备 -->
+            <ScrollViewer Grid.Column="1">
+                <ItemsControl ItemsSource="{Binding Devices}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel Orientation="Horizontal" />
@@ -25,14 +27,12 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <WrapPanel>
-                                <ct:ClickableTextBlock Text="{Binding Name}" Click="Device_Click" />
-                            </WrapPanel>
+                            <ct:VlcView Title="{Binding Name}" Site="{Binding Site}" Width="350" Height="235" />
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
-            </Grid>
-        </StackPanel>
+            </ScrollViewer>
+        </Grid>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150">
             <TextBlock Text="{Binding TxtStatus}" />

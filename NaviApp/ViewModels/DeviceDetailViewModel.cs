@@ -12,7 +12,7 @@ public class DeviceDetailViewModel(Guid deviceId) : ObservableObject
     {
         //产生一个5-10的随机数
         var random = new Random();
-        var life = random.Next(2, 5);
+        var life = random.Next(1, 2);
 
         // 模拟一个耗时的操作，执行 100 步
         for (var i = 1; i <= life; i++)

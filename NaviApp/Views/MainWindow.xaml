@@ -7,7 +7,7 @@
         xmlns:md3="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance d:Type=vm:NavigationViewModel, IsDesignTimeCreatable=True}"
-        Title="Navi App" Height="450" Width="800">
+        Title="Navi App" Height="550" Width="980">
     <md3:DialogHost DialogTheme="Inherit"
                     Identifier="RootDialog"
                     SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">

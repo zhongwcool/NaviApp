@@ -20,8 +20,8 @@ public partial class App : Application
                 // services.AddHostedService<EatService>();
                 // 其他服务配置...
                 services.AddSingleton<DataService>();
-                services.AddTransient<DevicesViewModel>();
-                services.AddTransient<RoomsViewModel>();
+                services.AddTransient<DeviceManageViewModel>();
+                services.AddTransient<RoomManageViewModel>();
             }
         ).Build();
 

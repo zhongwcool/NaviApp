@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:vm="clr-namespace:NaviApp.ViewModels"
       mc:Ignorable="d"
-      d:DataContext="{d:DesignInstance d:Type=vm:DevicesViewModel, IsDesignTimeCreatable=True}"
+      d:DataContext="{d:DesignInstance d:Type=vm:DeviceManageViewModel, IsDesignTimeCreatable=True}"
       Title="DevicesPage" d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.ColumnDefinitions>

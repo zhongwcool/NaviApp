@@ -6,11 +6,11 @@ using NaviApp.Views;
 
 namespace NaviApp.ViewModels;
 
-public class RoomsViewModel : ObservableObject
+public class RoomManageViewModel : ObservableObject
 {
     public ObservableCollection<Room> Rooms { get; set; }
 
-    public RoomsViewModel(DataService service)
+    public RoomManageViewModel(DataService service)
     {
         Rooms = service.Rooms;
         SelectedItem = Rooms[0];

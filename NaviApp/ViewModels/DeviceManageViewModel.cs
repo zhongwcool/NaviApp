@@ -6,9 +6,9 @@ using NaviApp.Views;
 
 namespace NaviApp.ViewModels;
 
-public class DevicesViewModel : ObservableObject
+public class DeviceManageViewModel : ObservableObject
 {
-    public DevicesViewModel(DataService service)
+    public DeviceManageViewModel(DataService service)
     {
         Devices = service.Devices;
         SelectedItem = Devices[0];

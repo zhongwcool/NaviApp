@@ -10,7 +10,7 @@ public partial class DeviceManagePage : Page
     public DeviceManagePage(Guid key)
     {
         InitializeComponent();
-        DataContext = (Application.Current as App)?.ServiceProvider?.GetRequiredService<DevicesViewModel>();
-        if (DataContext is DevicesViewModel vm) vm.SetSelectedItem(key);
+        DataContext = (Application.Current as App)?.ServiceProvider?.GetRequiredService<DeviceManageViewModel>();
+        if (DataContext is DeviceManageViewModel vm) vm.SetSelectedItem(key);
     }
 }

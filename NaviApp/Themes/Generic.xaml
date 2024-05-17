@@ -11,9 +11,9 @@
                 <ControlTemplate TargetType="{x:Type ct:ClickableTextBlock}">
                     <Border>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{TemplateBinding Text}" Padding="6, 8, 6, 4"
-                                       Cursor="Hand"
-                                       Foreground="{DynamicResource MaterialDesign.Brush.Primary.Light}">
+                            <TextBlock x:Name="PART_Title" Text="{TemplateBinding Text}"
+                                       Padding="2, 4, 2, 2"
+                                       Cursor="Hand">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
                                         <Style.Triggers>
@@ -25,12 +25,14 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <TextBlock x:Name="PART_Slash" Background="Coral" Height="2" Visibility="Collapsed" />
+                            <TextBlock x:Name="PART_Slash" Background="Coral" Height="2" Visibility="Hidden" />
                         </StackPanel>
                     </Border>
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_Title" Property="Foreground"
+                                    Value="{DynamicResource MaterialDesign.Brush.Primary.Light}" />
                             <Setter TargetName="PART_Slash" Property="Visibility" Value="Visible" />
                         </Trigger>
                     </ControlTemplate.Triggers>

@@ -1,81 +1,92 @@
 {
   "devices": [
     {
-      "Id": "f53b7ec2-16bf-4080-b1d2-08b112708eec",
+      "Id": "cf8c4d9d-9c13-4dac-8b11-862b328062ee",
       "Name": "设备1",
-      "RoomId": "c8bfa3e9-68fd-4465-8caf-451a3c257d22"
+      "Site": "https://livees.cgtn.com/1000e/prog_index.m3u8",
+      "RoomId": "9ad7a923-71ae-4f98-ba72-6292dfb35d6e"
     },
     {
-      "Id": "27983126-e33d-4e0b-aad4-4cca6d20a01a",
+      "Id": "ebe061ac-2614-4ad8-9115-a11c4e8aa484",
       "Name": "设备2",
-      "RoomId": "c8bfa3e9-68fd-4465-8caf-451a3c257d22"
+      "Site": "https://livear.cgtn.com/1000a/prog_index.m3u8",
+      "RoomId": "9ad7a923-71ae-4f98-ba72-6292dfb35d6e"
     },
     {
-      "Id": "307433cc-b0b3-402d-84d6-21714e01e142",
+      "Id": "3e522622-4a1c-4cf6-99cc-7b2a30d07aea",
       "Name": "设备3",
-      "RoomId": "c8bfa3e9-68fd-4465-8caf-451a3c257d22"
+      "Site": "https://liveru.cgtn.com/1000r/prog_index.m3u8",
+      "RoomId": "9ad7a923-71ae-4f98-ba72-6292dfb35d6e"
     },
     {
-      "Id": "02af1755-70c2-492a-9926-a44e4a8049cf",
+      "Id": "c377f2ba-b5ef-4529-895b-c8001e8921e3",
       "Name": "设备4",
-      "RoomId": "1f4dd2d6-b1ec-4084-9238-eb41a88546d4"
+      "Site": "https://livedoc.cgtn.com/500d/prog_index.m3u8",
+      "RoomId": "6811c42c-8479-4d5d-955e-78a874ea2dec"
     },
     {
-      "Id": "6b433123-d154-443b-b715-951e224d2c86",
+      "Id": "b861b6e3-e0b6-42aa-9867-2a367f3ae8fb",
       "Name": "设备5",
-      "RoomId": "1f4dd2d6-b1ec-4084-9238-eb41a88546d4"
+      "Site": "https://livedoc.cgtn.com/500d/prog_index.m3u8",
+      "RoomId": "6811c42c-8479-4d5d-955e-78a874ea2dec"
     },
     {
-      "Id": "1514b991-cbcc-4573-afec-83632cbb0430",
+      "Id": "7ee195c2-59f7-41b9-991d-09d5e84d9ffa",
       "Name": "设备6",
-      "RoomId": "1f4dd2d6-b1ec-4084-9238-eb41a88546d4"
+      "Site": "https://livedoc.cgtn.com/500d/prog_index.m3u8",
+      "RoomId": "6811c42c-8479-4d5d-955e-78a874ea2dec"
     },
     {
-      "Id": "91dcc920-ab1b-4be3-9d36-8c358b495eb1",
+      "Id": "1fcf86a9-53d0-4698-b39f-dd1f811ba5e9",
       "Name": "设备7",
-      "RoomId": "ac698a19-17ae-4750-a1fd-f26c4c4f689a"
+      "Site": "https://livefr.cgtn.com/1000f/prog_index.m3u8",
+      "RoomId": "543c490a-e7ee-4bf3-b963-835c1c4664a7"
     },
     {
-      "Id": "e0e478a1-fad3-4b35-be47-8789cc9cb0f8",
+      "Id": "587be1d5-d946-4240-ac95-98981f904ca0",
       "Name": "设备8",
-      "RoomId": "ac698a19-17ae-4750-a1fd-f26c4c4f689a"
+      "Site": "https://livees.cgtn.com/1000e/prog_index.m3u8",
+      "RoomId": "543c490a-e7ee-4bf3-b963-835c1c4664a7"
     },
     {
-      "Id": "fbc51459-513b-435d-b1cd-60b68951b303",
+      "Id": "0e88fb0f-453e-4803-bb22-560f6075b87b",
       "Name": "设备9",
-      "RoomId": "00000000-0000-0000-0000-000000000000"
+      "Site": "https://livedoc.cgtn.com/500d/prog_index.m3u8",
+      "RoomId": "6811c42c-8479-4d5d-955e-78a874ea2dec"
     },
     {
-      "Id": "db58941f-0182-4617-9a23-07241c75bb94",
+      "Id": "76e37ec1-8c08-4190-8f7c-f55fed9358dc",
       "Name": "设备10",
+      "Site": "http://tylive.kan0512.com/norecord/norecord_csztv1.m3u8",
       "RoomId": "00000000-0000-0000-0000-000000000000"
     }
   ],
   "rooms": [
     {
-      "Id": "c8bfa3e9-68fd-4465-8caf-451a3c257d22",
+      "Id": "9ad7a923-71ae-4f98-ba72-6292dfb35d6e",
       "Name": "房间1",
       "Devices": [
-        "f53b7ec2-16bf-4080-b1d2-08b112708eec",
-        "27983126-e33d-4e0b-aad4-4cca6d20a01a",
-        "307433cc-b0b3-402d-84d6-21714e01e142"
+        "cf8c4d9d-9c13-4dac-8b11-862b328062ee",
+        "ebe061ac-2614-4ad8-9115-a11c4e8aa484",
+        "3e522622-4a1c-4cf6-99cc-7b2a30d07aea"
       ]
     },
     {
-      "Id": "1f4dd2d6-b1ec-4084-9238-eb41a88546d4",
+      "Id": "6811c42c-8479-4d5d-955e-78a874ea2dec",
       "Name": "房间2",
       "Devices": [
-        "02af1755-70c2-492a-9926-a44e4a8049cf",
-        "6b433123-d154-443b-b715-951e224d2c86",
-        "1514b991-cbcc-4573-afec-83632cbb0430"
+        "c377f2ba-b5ef-4529-895b-c8001e8921e3",
+        "b861b6e3-e0b6-42aa-9867-2a367f3ae8fb",
+        "7ee195c2-59f7-41b9-991d-09d5e84d9ffa",
+        "0e88fb0f-453e-4803-bb22-560f6075b87b"
       ]
     },
     {
-      "Id": "ac698a19-17ae-4750-a1fd-f26c4c4f689a",
+      "Id": "543c490a-e7ee-4bf3-b963-835c1c4664a7",
       "Name": "房间3",
       "Devices": [
-        "91dcc920-ab1b-4be3-9d36-8c358b495eb1",
-        "e0e478a1-fad3-4b35-be47-8789cc9cb0f8"
+        "1fcf86a9-53d0-4698-b39f-dd1f811ba5e9",
+        "587be1d5-d946-4240-ac95-98981f904ca0"
       ]
     }
   ]

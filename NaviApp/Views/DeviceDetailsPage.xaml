@@ -5,31 +5,42 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:vm="clr-namespace:NaviApp.ViewModels"
       xmlns:ct="clr-namespace:NaviApp.Controls"
+      xmlns:wpf="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
       mc:Ignorable="d"
       d:DataContext="{d:DesignInstance d:Type=vm:DeviceDetailViewModel, IsDesignTimeCreatable=True}"
       d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <StackPanel>
-            <!-- 显示设备信息 -->
-            <TextBlock Text="{Binding SelectedDevice.Name}" />
+    <wpf:VideoView x:Name="VideoView" Background="Black">
+        <Grid>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="#6FFF" />
+                        <GradientStop Offset="0.5" Color="#2FFF" />
+                        <GradientStop Offset="1" Color="Transparent" />
+                    </LinearGradientBrush>
+                </StackPanel.Background>
 
-            <!-- 其他设备详情 -->
-            <Grid Margin="0,10,0,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label FontWeight="Bold" Grid.Column="0">归属*:</Label>
+                <!-- 显示设备信息 -->
+                <Label Content="{Binding SelectedDevice.Name}" FontWeight="Heavy" VerticalAlignment="Center" />
 
-                <WrapPanel Grid.Column="1">
-                    <ct:ClickableTextBlock Text="{Binding Owner.Name}" Click="Room_Click" />
-                </WrapPanel>
-            </Grid>
-        </StackPanel>
+                <!-- 设备归属 -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label FontWeight="Bold" Grid.Column="0">归属*:</Label>
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150">
-            <TextBlock Text="{Binding TxtStatus}" />
-            <ProgressBar Maximum="100" Value="{Binding ProgressValue}" />
-        </StackPanel>
-    </Grid>
+                    <WrapPanel Grid.Column="1">
+                        <ct:ClickableTextBlock Text="{Binding Owner.Name}" Click="Room_Click" />
+                    </WrapPanel>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150">
+                <TextBlock Text="{Binding TxtStatus}" />
+                <ProgressBar Maximum="100" Value="{Binding ProgressValue}" />
+            </StackPanel>
+        </Grid>
+    </wpf:VideoView>
 </Page>
